@@ -110,7 +110,7 @@ function calculate() {
     return;
   }
   if (isNaN(parseFloat(previousNumber)) || isNaN(parseFloat(currentNumber))) {
-    displayScreen.textContent = "Error: número inválido";
+    displayScreen.textContent = "✖️: Número inválido";
     return;
   }
   switch (operation) {
@@ -125,7 +125,7 @@ function calculate() {
       break;
     case "/":
       if (parseFloat(currentNumber) === 0) {
-        displayScreen.textContent = "Error: Indivisible entre 0";
+        displayScreen.textContent = "✖️: Indivisible entre 0";
         return;
       }
       result = parseFloat(previousNumber) / parseFloat(currentNumber);
