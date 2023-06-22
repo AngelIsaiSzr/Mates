@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas de multiplicar</title>
+  <meta name="description"
+    content="Aprende y memoriza las tablas de multiplicar con esta herramienta matemática fundamental. Genera tablas de multiplicar de manera fácil y rápida.">
+  <link rel="icon" href="../images/icono.ico">
+  <link rel="stylesheet" type="text/css" href="../css/tablas.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+    integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+    crossorigin="anonymous"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div class="menu-desplegable">
+    <button class="boton-menu" onclick="toggleMenu()">☰</button>
+    <ul class="opciones-menu">
+      <li><a href="../html/inicio.html">Inicio</a></li>
+      <li><a href="../html/tablas.html">Tablas</a></li>
+      <li><a href="../html/calculadora.html">Calculadora</a></li>
+      <li><a href="../html/conversor.html">Conversor</a></li>
+      <li><a href="../html/cronometro.html">Cronómetro</a></li>
+      <li><a href="../html/temporizador.html">Temporizador</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Tablas de multiplicar</h1>
+  </header>
+  <main>
+    <form id="formulario-tabla" onsubmit="mostrarTabla(); return false;">
+      <div class="campo-tabla">
+        <label for="tabla"><br>Ingrese la tabla de multiplicar <br>que desea ver:</label>
+        <input type="number" id="tabla" name="tabla" autofocus>
+        <button type="submit">Generar</button>
+      </div>
+    </form>
+    <div id="tabla-carga"></div>
+    <div id="tabla-error"></div>
+    <div id="tabla-resultado"></div>
+    <div class="contenedor">
+      <button onclick="descargarTabla()">Descargar</button>
+
+      <div id="informacion">
+        <h2>¿Qué son las tablas de multiplicar?</h2>
+        <p>Las tablas de multiplicar son una herramientática matemática fundamental que permite a los estudiantes
+          aprender y
+          memorizar las operaciones de multiplicación. Conocer las tablas de multiplicar es esencial para realizar
+          cálculos
+          matemáticos de manera rápida y precisa.</p>
+        <img src="../images/tabla-multiplicar.jpg" alt="Ejemplo de tabla de multiplicar">
+        <p>Las tablas de multiplicar no solo son útiles para realizar cálculos matemáticos en el aula, sino que también
+          tienen aplicaciones prácticas en la vida cotidiana. Por ejemplo, al hacer compras, es necesario calcular el
+          costo
+          total de varios artículos multiplicando el precio por la cantidad. En la cocina, las recetas a menudo
+          requieren la
+          multiplicación de fracciones para ajustar las porciones. En el trabajo, las tablas de multiplicar pueden ser
+          útiles para calcular el tiempo o el costo de tareas repetitivas.</p>
+
+        <h2>Ejemplos de tablas de multiplicar</h2>
+
+        <h3>Tabla del 2</h3>
+        <table>
+          <tr>
+            <th>2 x 1</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>2 x 2</th>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th>2 x 3</th>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th>2 x 4</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>2 x 5</th>
+            <td>10</td>
+          </tr>
+        </table>
+
+        <h3>Tabla del 5</h3>
+        <table>
+          <tr>
+            <th>5 x 1</th>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>5 x 2</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th>5 x 3</th>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th>5 x 4</th>
+            <td>20</td>
+          </tr>
+          <tr>
+            <th>5 x 5</th>
+            <td>25</td>
+          </tr>
+        </table><br>
+
+        <h2>Consejos para memorizar las tablas de multiplicar</h2>
+        <p>- Utiliza la técnica de la repetición: practica escribir y recitar las tablas de multiplicar regularmente.
+        </p>
+        <p>- Juega juegos interactivos como "Memory" o "Concentración" utilizando las tablas de multiplicar.</p>
+        <p>- Asocia cada número con una imagen o una palabra que te sea fácil de recordar. Por ejemplo, puedes asociar
+          el
+          número 6 con un elefante, ya que ambos tienen una trompa larga.</p>
+
+        <h2>Relación de las tablas de multiplicar con otros temas matemáticos</h2>
+        <p>Las tablas de multiplicar son la base de muchos otros conceptos matemáticos. Por ejemplo, la división es la
+          operación inversa de la multiplicación, y el conocimiento de las tablas de multiplicar es esencial para
+          aprender a
+          dividir. Las fracciones y las proporciones también están relacionadas con las tablas de multiplicar, ya que a
+          menudo se requiere multiplicar fracciones para encontrar una solución.</p>
+
+        <h2>Preguntas de práctica y ejercicios</h2>
+        <p>Practica tus habilidades de memorización y cálculo con estas preguntas y ejercicios:</p>
+        <ol>
+          <li>¿Cuál es el resultado de 7 x 8?</li>
+          <li>Completa la tabla del 4: </li>
+          <h3>Tabla del 4</h3>
+          <table>
+            <tr>
+              <th>4 x 1</th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th>4 x 2</th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <th>4 x 3</th>
+              <td>12</td>
+            </tr>
+            <tr>
+              <th>4 x 4</th>
+              <td>16</td>
+            </tr>
+          </table><br>
+          <li>Si una pizza se divide en 8 rebanadas iguales, ¿cuántas rebanadas habrá si se divide en 4 partes iguales?
+          </li>
+          <li>Resuelve la siguiente operación: 3/4 x 8/9</li>
+        </ol>
+
+        <p>Además de utilizar esta herramienta, existen numerosas formas entretenidas y eficaces de aprender las tablas
+          de
+          multiplicar. Por ejemplo, puedes jugar juegos en línea que te permitan practicar tus habilidades, participar
+          en
+          actividades en grupo que fomenten la colaboración y el aprendizaje cooperativo, o realizar ejercicios
+          prácticos
+          que te ayuden a consolidar tus conocimientos. ¡Aprender las tablas de multiplicar no tiene por qué ser
+          aburrido!
+          Aprovecha estas oportunidades para divertirte mientras te conviertes en un experto en matemáticas.</p>
+        <h3>Recursos adicionales:</h3>
+        <ul>
+          <li><a target="_blank" href="https://tablas-de-multiplicar.org/">Tablas de Multiplicar ~ Multiplicacion |
+              Imágenes | Ejemplos</a></li>
+          <li><a target="_blank" href="https://es.wikipedia.org/wiki/Tabla_de_multiplicar">Tabla de multiplicar -
+              Wikipedia, la enciclopedia libre</a></li>
+          <li><a target="_blank" href="https://www.mundoprimaria.com/recursos-educativos/tablas-de-multiplicar">Juegos
+              para aprender las Tablas de Multiplicar</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Codificado por Angel Szr</p>
+  </footer>
+  <script src="../js/tablas.js"></script>
+</body>
+
+</html>

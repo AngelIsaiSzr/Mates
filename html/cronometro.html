@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mates</title>
+  <meta name="description"
+    content="En esta seccion encontrarás información detallada sobre los cronómetros: qué son, cómo funcionan, los diferentes tipos que existen y sus usos en diferentes ámbitos, como el deporte, la ciencia y la música.">
+  <link rel="icon" href="../images/icono.ico">
+  <link rel="stylesheet" type="text/css" href="../css/cronometro.css">
+</head>
+
+<body>
+  <div class="menu-desplegable">
+    <button class="boton-menu" onclick="toggleMenu()">☰</button>
+    <ul class="opciones-menu">
+      <li><a href="../html/inicio.html">Inicio</a></li>
+      <li><a href="../html/tablas.html">Tablas</a></li>
+      <li><a href="../html/calculadora.html">Calculadora</a></li>
+      <li><a href="../html/conversor.html">Conversor</a></li>
+      <li><a href="../html/cronometro.html">Cronometro</a></li>
+      <li><a href="../html/temporizador.html">Temporizador</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Cronómetro</h1>
+  </header>
+  <main>
+    <div id="cronometro">
+      <div id="tiempo-transcurrido">00:00:00</div><br>
+      <button id="boton-inicio" onclick="iniciarCronometro()">Iniciar &#9658</button>
+      <button id="boton-detener" onclick="detenerCronometro()">Detener &#8718</button><br>
+      <button id="boton-reinicio" onclick="reiniciarCronometro()">Reiniciar &#8635</button>
+    </div>
+  </main>
+
+  <div id="informacion">
+    <h2>¿Qué es un cronómetro?</h2>
+    <p>Un cronómetro es un dispositivo que se utiliza para medir el tiempo transcurrido entre dos eventos. Los
+      cronómetros se utilizan en deportes, en experimentos científicos y en otras situaciones en las que es importante
+      medir con precisión el tiempo.</p>
+    <figure>
+      <img src="../images/cronometro.png" alt="Ejemplo de cronómetro">
+      <figcaption>Imagen de un cronómetro.</figcaption>
+    </figure>
+
+    <h3>Tipos de cronómetros</h3>
+    <p>Existen diferentes tipos de cronómetros según su funcionamiento:</p>
+    <ul>
+      <li>Cronómetros analógicos: son los clásicos, en los que se utilizan agujas para medir el tiempo. Pueden ser
+        mecánicos o electrónicos.</li>
+      <li>Cronómetros digitales: muestran el tiempo en formato digital y suelen tener funciones adicionales como
+        temporizador y alarma.</li>
+      <li>Cronómetros de precisión: son dispositivos muy precisos que se utilizan en experimentos científicos y en
+        deportes de alta competición.</li>
+    </ul>
+
+    <figure class="-ul">
+      <img src="../images/cronometro-analogico.png" alt="Cronómetro analógico">
+      <figcaption>Cronómetro analógico.</figcaption>
+    </figure>
+
+    <h3>Usos de los cronómetros</h3>
+    <p>Los cronómetros se utilizan en diferentes ámbitos, como:</p>
+    <ul>
+      <li>Deportes: para medir el tiempo de las competiciones y entrenamientos.</li>
+      <li>Ciencia: para medir el tiempo en experimentos y estudios.</li>
+      <li>Industria: para medir el tiempo de procesos productivos y mejorar la eficiencia.</li>
+      <li>Música: para medir el tiempo en la interpretación de piezas musicales.</li>
+    </ul>
+
+    <figure class="-ul">
+      <img src="../images/cronometro-digital.png" alt="Cronómetro digital">
+      <figcaption>Cronómetro digital.</figcaption>
+    </figure>
+
+    <h3>Historia de los cronómetros</h3>
+    <p>Los primeros cronómetros fueron desarrollados en el siglo XVIII por relojeros suizos. Estos dispositivos eran
+      capaces de medir el tiempo con gran precisión y se utilizaron en la navegación marítima para determinar la
+      longitud.</p>
+
+    <figure>
+      <img src="../images/cronometro-antiguo.png" alt="Cronómetro de precisión">
+      <figcaption>Cronómetro de precisión.</figcaption>
+    </figure>
+
+    <h3>Recursos adicionales</h3>
+    <p>Si quieres saber más sobre los cronómetros, puedes visitar los siguientes sitios web:</p>
+    <ul>
+      <li><a target="_blank" href="https://es.wikipedia.org/wiki/Cron%C3%B3metro">Wikipedia: Cronómetro</a></li>
+      <li><a target="_blank" href="https://www.anahuac.mx/mexico/noticias/El-cronometro-mide-mas-que-solo-el-tiempo">El cronómetro mide
+          más que solo el tiempo</a></li>
+      <li><a target="_blank" href="https://www.my-alarm-clock.com/es/articulos/quien-invento-el-cronometro">¿Quién inventó el
+          cronómetro? | My Alarm Clock</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Codificado por Angel Szr</p>
+  </footer>
+  <script src="../js/cronometro.js"></script>
+</body>
+
+</html>
