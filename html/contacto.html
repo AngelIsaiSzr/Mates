@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mates</title>
+  <meta name="description" content="Formulario de Contacto">
+  <link rel="icon" href="../images/icono.ico">
+  <link rel="stylesheet" type="text/css" href="../css/contacto.css">
+</head>
+
+<body>
+  <div class="menu-desplegable">
+    <button class="boton-menu" onclick="toggleMenu()">☰</button>
+    <ul class="opciones-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../html/tablas.html">Tablas</a></li>
+      <li><a href="../html/calculadora.html">Calculadora</a></li>
+      <li><a href="../html/conversor.html">Conversor</a></li>
+      <li><a href="../html/cronometro.html">Cronometro</a></li>
+      <li><a href="../html/temporizador.html">Temporizador</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Contacto</h1>
+  </header>
+
+  <div id="ventana-emergente" class="ventana-emergente">
+    <div class="mensaje"><span></span></div>
+  </div>
+
+  <main>
+
+    <form id="formulario" action="https://formspree.io/f/mnqyekwv" method="POST">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="name" required>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="message" required></textarea>
+    
+      <button type="submit" onclick="enviado(event)">Enviar</button>
+    
+    </form>
+
+  <div id="informacion">
+    <h2>Creador:</h2>
+    <p>Gracias por querer contactarte conmigo, estaré al pendiente de tus dudas, sugerencias, comentarios o bugs
+      relacionados con mi página web, ¡Saludos!</p>
+    <img src="../images/saludos.jpeg" alt="Saludos">
+    <div class="redes-sociales">
+      <a target="_blank" href="https://facebook.com/AngelIsaiSzr">
+        <img src="../images/logo-facebook.png" alt="Facebook">
+        Facebook
+      </a>
+      <a target="_blank" href="https://github.com/AngelIsaiSzr">
+        <img src="../images/logo-github.png" alt="GitHub">
+        GitHub
+      </a>
+      <a target="_blank" href="https://instagram.com/AngelIsaiSzr">
+        <img src="../images/logo-instagram.jpeg" alt="Instagram">
+        Instagram
+      </a>
+    </div>
+  </div>
+</main>
+
+  <footer>
+    <p>Codificado por Angel Szr</p>
+  </footer>
+  <script src="../js/contacto.js"></script>
+</body>
+
+</html>

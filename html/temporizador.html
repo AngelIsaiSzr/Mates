@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mates</title>
+  <meta name="description"
+    content="Esta seccion esta dedicada a explicar qué es un temporizador, sus diferentes tipos y usos en diferentes industrias, así como recursos adicionales para obtener más información sobre el tema.">
+  <link rel="icon" href="../images/icono.ico">
+  <link rel="stylesheet" type="text/css" href="../css/temporizador.css">
+</head>
+
+<body>
+  <div class="menu-desplegable">
+    <button class="boton-menu" onclick="toggleMenu()">☰</button>
+    <ul class="opciones-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../html/tablas.html">Tablas</a></li>
+      <li><a href="../html/calculadora.html">Calculadora</a></li>
+      <li><a href="../html/conversor.html">Conversor</a></li>
+      <li><a href="../html/cronometro.html">Cronometro</a></li>
+      <li><a href="../html/temporizador.html">Temporizador</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Temporizador</h1>
+  </header>
+  
+  <main>
+    <div id="temporizador">
+      <label for="temporizador-input"><br>Ingrese los segundos para el temporizador:</label>
+      <input type="number" id="temporizador-input" name="temporizador-input" min="1" max="3600">
+      <button type="button" onclick="iniciarTemporizador()">Iniciar &#9658</button>
+      <button type="button" onclick="detenerTemporizador()">Detener &#8718</button><br>
+      <button type="button" onclick="reiniciarTemporizador()">Reiniciar &#8635</button>
+    </div>
+    <div id="temporizador-resultado"></div>
+
+    <div id="informacion">
+      <h2>¿Qué es un temporizador?</h2>
+      <p>Un temporizador es una herramienta que permite medir el tiempo transcurrido y programar una cuenta regresiva
+        para una tarea en particular. Los temporizadores se usan para medir el tiempo de cocción de un plato en el
+        horno, para programar una tarea específica en una computadora, para controlar la duración de una presentación,
+        entre otras aplicaciones.</p>
+
+      <img src="../images/temporizador.png" alt="Ejemplo de temporizador">
+
+      <h3>Tipos de temporizadores</h3>
+      <p>Existen diferentes tipos de temporizadores, algunos de los cuales incluyen:</p>
+      <ul>
+        <li>Temporizadores mecánicos: utilizan engranajes y ruedas dentadas para medir el tiempo.</li>
+        <li>Temporizadores electrónicos: utilizan circuitos eléctricos para medir el tiempo.</li>
+        <li>Temporizadores digitales: son dispositivos electrónicos que utilizan microprocesadores para medir el tiempo.
+        </li>
+      </ul>
+
+      <figure class="-ul">
+        <img src="../images/temporizador-electronico.png" alt="Ejemplo de temporizador electrónico">
+      </figure>
+
+      <h3>Usos de los temporizadores</h3>
+      <p>Los temporizadores se utilizan en una amplia variedad de situaciones, algunas de las cuales incluyen:</p>
+      <ul>
+        <li>En la cocina para medir el tiempo de cocción de alimentos.</li>
+        <li>En la industria de la música para controlar la duración de una canción o un set.</li>
+        <li>En la industria manufacturera para automatizar procesos.</li>
+        <li>En la medicina para programar medicamentos y tratamientos.</li>
+        <li>En el deporte para medir el tiempo de un evento o un ejercicio.</li>
+      </ul>
+
+      <figure class="-ul">
+        <img src="../images/temporizador-digital.png" alt="Ejemplo de temporizador digital">
+      </figure>
+
+      <h3>Recursos adicionales</h3>
+      <p>Si quieres saber más sobre los temporizadores, puedes visitar los siguientes sitios web:</p>
+      <ul>
+        <li><a target="_blank" href="https://es.wikipedia.org/wiki/Temporizador">Wikipedia: Temporizador</a></li>
+        <li><a target="_blank"
+            href="https://www.monografias.com/trabajos97/temporizador/temporizador.shtml">Monografías: Temporizador</a>
+        </li>
+        <li><a target="_blank" href="https://www.autycom.com/temporizadores-plc-definicion-y-usos/">Temporizadores PLC:
+            definición y usos</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Codificado por Angel Szr</p>
+  </footer>
+  <script src="../js/temporizador.js"></script>
+</body>
+
+</html>

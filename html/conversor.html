@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mates</title>
+  <meta name="description"
+    content="En esta seccion encontrarás un conversor de unidades que te permitirá convertir medidas de temperatura, moneda y longitud de una unidad de medida a otra.">
+  <link rel="icon" href="../images/icono.ico">
+  <link rel="stylesheet" type="text/css" href="../css/conversor.css">
+</head>
+
+<body>
+  <div class="menu-desplegable">
+    <button class="boton-menu" onclick="toggleMenu()">☰</button>
+    <ul class="opciones-menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../html/tablas.html">Tablas</a></li>
+      <li><a href="../html/calculadora.html">Calculadora</a></li>
+      <li><a href="../html/conversor.html">Conversor</a></li>
+      <li><a href="../html/cronometro.html">Cronometro</a></li>
+      <li><a href="../html/temporizador.html">Temporizador</a></li>
+      <li><a href="../html/contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Conversor de unidades</h1>
+  </header>
+  <main>
+    <div>
+      <br><label>Seleccione un Conversor:</label>
+      <select id="conversor">
+        <option value="temperatura-conversor">Temperatura</option>
+        <option value="moneda-conversor">Moneda</option>
+        <option value="longitud-conversor">Longitud</option>
+      </select>
+    </div>
+
+    <!-- Sección de conversión de temperatura -->
+    <div class="temperatura-conversor conversor">
+      <label>Unidad de origen:</label>
+      <select id="unidad-origen-temperatura">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+      <br>
+      <label>Unidad de destino:</label>
+      <select id="unidad-destino-temperatura">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+    </div>
+
+    <!-- Sección de conversión de moneda -->
+    <div class="moneda-conversor conversor" style="display:none;">
+      <label>Unidad de origen:</label>
+      <select id="unidad-origen-moneda">
+        <option value="USD">Dólares Americanos</option>
+        <option value="EUR">Euros</option>
+        <option value="MXN">Pesos Mexicanos</option>
+        <option value="COP">Pesos Colombianos</option>
+      </select>
+      <br>
+      <label>Unidad de destino:</label>
+      <select id="unidad-destino-moneda">
+        <option value="USD">Dólares Americanos</option>
+        <option value="EUR">Euros</option>
+        <option value="MXN">Pesos Mexicanos</option>
+        <option value="COP">Pesos Colombianos</option>
+      </select>
+    </div>
+
+    <!-- Sección de conversión de longitud -->
+    <div class="longitud-conversor conversor" style="display:none;">
+      <label>Unidad de origen:</label>
+      <select id="unidad-origen-longitud">
+        <option value="metros">Metros</option>
+        <option value="kilometros">Kilómetros</option>
+        <option value="pies">Pies</option>
+        <option value="millas">Millas</option>
+      </select>
+      <br>
+      <label>Unidad de destino:</label>
+      <select id="unidad-destino-longitud">
+        <option value="metros">Metros</option>
+        <option value="kilometros">Kilómetros</option>
+        <option value="pies">Pies</option>
+        <option value="millas">Millas</option>
+      </select>
+    </div>
+    <div>
+        <label>Valor:</label>
+        <input type="number" id="valor">
+    </div>
+    <div>
+      <button id="boton-convertir" type="button">Convertir</button>
+    </div>
+    <div id="conversor-error"></div>
+    <div id="conversor-resultado"></div>
+
+  <div id="informacion">
+    <h2>¿Qué es un conversor de unidades?</h2>
+    <p>Un conversor de unidades es una herramienta que te permite convertir una cantidad de una unidad de medida a otra
+      unidad de medida. En este conversor, puedes convertir medidas de temperatura, moneda y longitud.</p>
+    <img src="../images/conversor.png" alt="Ejemplo de conversor" class="imagen-informacion">
+    <h3>Tipos de conversión disponibles</h3>
+      <p>- Temperatura: Convierte entre Celsius, Fahrenheit y Kelvin.</p>
+      <p>- Moneda: Convierte entre Dólares Americanos, Euros, Pesos Mexicanos y Pesos Colombianos.</p>
+      <p>- Longitud: Convierte entre Metros, Kilómetros, Pies y Millas.</p>
+    <h3>Cómo utilizar el conversor</h3>
+    <ol>
+      <li>Selecciona el tipo de conversión que deseas realizar en el menú desplegable.</li>
+      <li>Selecciona la unidad de medida de origen y la unidad de medida de destino en las secciones correspondientes.
+      </li>
+      <li>Ingresa el valor que deseas convertir en el campo "Valor".</li>
+      <li>Haz clic en el botón "Convertir".</li>
+    </ol>
+    <p>El resultado de la conversión se mostrará en la sección "Resultado". Si ocurre algún error durante la conversión,
+      se mostrará un mensaje de error en la sección "Error".</p>
+      <h3>Recursos adicionales</h3>
+      <p>Para obtener más información sobre los conversores de unidades, puedes visitar los siguientes sitios web:</p>
+      <ul>
+        <li><a target="_blank" href="https://es.wikipedia.org/wiki/Conversi%C3%B3n_de_unidades">Wikipedia: Conversión de unidades</a></li>
+        <li><a target="_blank" href="https://www.e-medida.es/numero-15/historia-de-las-unidades-desde-el-sistema-metrico-decimal-hasta-la-reciente-revision-del-sistema-internacional-de-unidades/">Historia de las unidades</a></li>
+        <li><a target="_blank" href="https://www.metric-conversions.org/es/">Conversor de unidades</a></li>
+      </ul>
+  </div>
+</main>
+
+  <footer>
+    <p>Codificado por Angel Szr</p>
+  </footer>
+  <script src="../js/conversor.js"></script>
+</body>
+
+</html>
