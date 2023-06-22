@@ -253,12 +253,14 @@ button:hover {
     height: auto;
     display: block;
     margin: 0 auto;
+    margin-top: -25px;
+    margin-bottom: -20px;
 }
 
 #informacion .redes-sociales {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 70px;
 }
 
